@@ -1,0 +1,25 @@
+{
+  "name": "sandbox",
+  "version": "0.0.1",
+  "engines": {
+    "node": "7.1.0",
+    "npm": "3.10.9"
+  },
+  "scripts": {
+    "debug": "npm start --inspect",
+    "start": "./node_modules/babel-cli/bin/babel-node.js ./src/index.js",
+    "watch": "./node_modules/babel-watch/babel-watch.js ./src/index.js"
+  },
+  "dependencies": {
+    "ramda": "^0.24.1",
+    "react": "^15.6.1",
+    "unirest": "^0.5.1"
+  },
+  "description": "Area for fights with js",
+  "repository": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "git+https://github.com/babel/babel-preset-env.git"
+  }
+}
