@@ -1,5 +1,16 @@
 {
   "presets": [
-    "es2015"
+    "es2015",
+    "flow",
+    ["env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
+  ],
+  "plugins": [
+    "syntax-flow",
+    "transform-object-rest-spread",
+    "transform-flow-strip-types"
   ]
 }

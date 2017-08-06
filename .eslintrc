@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "airbnb-base",
+    "airbnb-flow",
+    "plugin:jest/recommended",
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "jest",
+    "flowtype",
+    "flowtype-errors"
+  ],
+  "env": {
+    "jest/globals": true
+  },
+  "rules": {
+    "strict": 0,
+    "flowtype-errors/show-errors": 2
+  }
+}
