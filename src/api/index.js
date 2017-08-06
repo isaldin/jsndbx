@@ -1,15 +1,24 @@
+// @flow
+
 import * as unirest from 'unirest';
+import R from 'ramda';
 
-const baseURI = 'https://www.googleapis.com/youtube/v3';
-const get = (path) => unirest.get(baseURI + path);
+export const withDefaultUrl = (path: string) => `https://api.github.com${path}`;
 
-export const search = (query) =>
-  get('/search')
-    .query({
-      maxResults: '25',
-      part: 'snippet',
-      q: query,
-      type: '',
-    })
-    .query('key', 'AIzaSyAYgYhyWjjAmrrFw7iA_RMlpGr-kGhVNbY')
-    .end;
+export const addDefaultUserAgent = (request) => {
+  request.header({
+    'User-Agent': 'TestGithubClient',
+  });
+  return request;
+};
+
+export const request = (url: string) => unirest.get(url);
+
+export const user = (userName: string) => `/users/${userName}`;
+
+export const usersR = R.pipe(
+  user,
+  withDefaultUrl,
+  request,
+  addDefaultUserAgent,
+);
