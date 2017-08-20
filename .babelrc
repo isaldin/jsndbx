@@ -1,16 +1,19 @@
 {
   "presets": [
     "es2015",
+    "react",
     "flow",
     ["env", {
       "targets": {
-        "node": "current"
+        "node": "current",
+        "browsers": ["last 2 versions", "safari >= 7"]
       }
     }]
   ],
   "plugins": [
     "syntax-flow",
     "transform-object-rest-spread",
-    "transform-flow-strip-types"
+    "transform-flow-strip-types",
+    "transform-remove-strict-mode"
   ]
 }
