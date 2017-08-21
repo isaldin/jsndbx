@@ -11,14 +11,12 @@
     "watch2": "./node_modules/.bin/watchify ./dist/socketio.js -o ./dist/_socketio.js --debug --verbose"
   },
   "dependencies": {
+    "browser-request": "^0.3.3",
     "debug": "^3.0.0",
     "hapi": "^16.5.2",
     "inert": "^4.2.1",
-    "ramda": "^0.24.1",
-    "rxjs": "^5.4.3",
     "socket.io": "^2.0.3",
-    "socket.io-client": "^2.0.3",
-    "unirest": "^0.5.1"
+    "socket.io-client": "^2.0.3"
   },
   "description": "Area for fights with js",
   "repository": "",
@@ -27,7 +25,6 @@
     "utf-8-validate": "^3.0.3",
     "watchify": "^3.9.0",
     "babel-plugin-transform-remove-strict-mode": "^0.0.2",
-    "browser-request": "^0.3.3",
     "budo": "^10.0.4",
     "bufferutil": "^3.0.2",
     "babel-cli": "^6.24.1",

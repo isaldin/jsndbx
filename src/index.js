@@ -32,7 +32,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('disconnect', (reason) => {
-    log(`user disconnected with reason ${reason}`);
+    log(`user disconnected with reason '${reason}'`);
   });
 });
 
